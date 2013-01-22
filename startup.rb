@@ -11,4 +11,3 @@ oemrLogin(@brw,$server,'admin','pass')
 require "./fee_sheet_tests.rb"
 @fst=FeeSheetTests.new @s
 @fst.setPatient (PatientData.new 1,"Male")
-@fst.run

@@ -76,3 +76,9 @@ def create_patient(os,data,sex)
   sleep 3
   os.brw.windows[0].use
 end
+
+def clear_patient_data(con,pid)
+  con.query 'DELETE lists where pid='+pid
+  con.query 'DELETE issue_encounter where pid='+pid
+  con.query 'DELETE billing where pid='+pid
+end
